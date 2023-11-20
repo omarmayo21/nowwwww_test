@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dreve</title>
+    <!-- start css -->
+    <link rel="stylesheet" href="./staly/all.min.css">
+    <link rel="stylesheet" href="./staly/normalize.css">
+    <link rel="stylesheet" href="./staly/frmwer.css">
+    <link rel="stylesheet" href="./staly/main.css">
+    <link rel="icon" href="./imge/slider-index/logo (1).jpeg">
+    <!-- end css -->
+    
+    <!-- start font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- end font -->
+</head>
+<body>
+     <!-- start nav -->
+     <nav class="pt-15 pos-r">
+        <div class="container df-btenn">
+            <div class="logo">
+                <img src="./imge/new/logo-1-153x102 copy2.png" alt="">
+            </div>
+
+            <div class="text sidebar sidebar-en ">
+                <ul class="d-flex-c">
+                    <li onclick=hideSidebar() class="close"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 -960 960 960" width="38"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li class=" d-flex-c fs-22 "><a href="./index-en.html">Home</a></li>
+                    <li class=" d-flex-c fs-22 acteve"><a href="./order_2-en.html">Order Washing</a></li>
+                    <li class=" d-flex-c fs-22 hova flex-column"><a href="./slider-en.html">Our Washes</a></li>
+                    <li class=" d-flex-c fs-22 "><a href="./contctus-en.html">Contact Us</a></li>
+                     <!-- Start Languatch -->
+                    
+                     <div class="lang-menu lang-menu-en">
+                        <div class="selected-lang">
+                            English
+                        </div>
+                        <ul class="gruop-lang">
+                            <li><a href="./order_2.html">الـعربـية</a></li>
+                           
+                        </ul>
+                    </div>
+
+
+                    <!-- End Languatch -->
+              
+                </ul>
+            </div>
+            <div class="hampuger">
+                <ul>
+                    <li onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 -960 960 960" width="38"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+
+    <!-- start order_3 -->
+    <div class="order_3 mt-40">
+        <div class="container">
+            <h2>Book Now</h2>
+    
+            <div class="c-tow mt-40">
+                <form action="https://formspree.io/f/xoqozegg" method="POST">
+                    <div class="form frst">
+                        <div class="details personal pos-r">
+    
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label for="">First Name</label>
+                                    <input type="text" required name="nameFrst" required id="nameFrst">
+                                </div>
+                                <div class="input-field">
+                                    <label for="">Last Name</label>
+                                    <input type="text" name="nameScnd" required id="nameScnd">
+                                </div>
+                            </div>
+                            <div class="fields">
+                                <div class=" input-scnd ">
+                                    <label for="">Region</label>
+                                    <input type="text" name="Region" required id="Region">
+                                </div>
+                            </div>
+                            <div class="fields">
+                                <div class=" input-scnd ">
+                                    <label for="">Street</label>
+                                    <input type="text" name="Street" required id="Street">
+                                </div>
+                            </div>
+    
+                            <div class="fields mt-25">
+                                <div class="input-field">
+                                    <label for="">Email</label>
+                                    <input type="email" name="email" required id="email">
+                                </div>
+                                <div class="input-field">
+                                    <label for="">Phone Number</label>
+                                    <input type="tel" id="phone" required name="client_phone_number">
+                                </div>
+                            </div>
+                            <div class="fields bb-tb">
+                                <div class=" input-scnd ">
+                                    <label for="">Car Number and Model</label>
+                                    <input type="text" name="databese" required id="databese">
+                                </div>
+                            </div>
+    
+                            <div class="fields pt-25">
+    
+                                <div class="input-scnd botmmmm botmmmm-en">
+                                    <label for="">Services Menu</label>
+                                    <input type="text" class="textBox" placeholder="Custom services menu." name="vipNorm" id="vipNorm" readonly required>
+                                    <div class="option">
+                                        <div class="vp" onclick="show('Normal Wash')">
+                                            <h2>Normal Wash <span><i class="fa-solid fa-clock"></i> 1h 30min</span> <span><i class="fa-solid fa-tag"></i> 8.00 KWD</span></h2>
+                                            <p>Regular interior cleaning, exterior wash with soap.</p>
+                                        </div>
+                                        <div class="vp" onclick="show('VIP Wash')">
+                                            <h2>VIP Wash <span><i class="fa-solid fa-clock"></i> 3h</span> <span><i class="fa-solid fa-tag"></i> 18.00 KWD</span></h2>
+                                            <p>VIP cleaning - cleaning seats, floors, ceiling, doors, dashboard, removing all stains + steaming and fragrancing, covering seats for protection with transmission and steering wheel + tissue box + external wash with wax soap.</p>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        function show(anything) {
+                                            document.querySelector('.textBox').value =
+                                                anything;
+                                        }
+                                        let botmmmm = document.querySelector('.botmmmm');
+                                        botmmmm.onclick = function () {
+                                            botmmmm.classList.toggle('active');
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+    
+                            <div class="fields mt-25">
+                                <div class="input-field">
+                                    <label for="">Select Date and Time</label>
+                                    <input type="datetime-local" name="datatime" required id="datatime">
+                                </div>
+                                <div class="input-field">
+                                    <label for="">Payment Methods</label>
+                                    <select autocomplete="off" id="payment">
+                                        <option action selected>Choose</option>
+                                        <option value="Cash" name="cash"></option>
+                                        <option value="K-Net" name="KNT"></option>
+                                        <option value="VISA" name="VISA">VISA</option>
+                                        <option value="MasterCard" name="MASTER">MasterCard</option>
+                                        <option value="LINK" name="LINK">Payment Link</option>
+                                    </select>
+                                </div>
+    
+                            </div>
+                            <div class="fields mt-25">
+    
+                                <div class="input-submit ">
+                                    <button type="submit" id="submit">send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </form>
+    
+            </div>
+    
+    
+        </div>
+    
+    </div>
+    
+    <!-- end order_3 -->
+        <!-- start footer -->
+        <footer class="pos-r">
+
+              <!-- srart fasel -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                                    <path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
+                                    <path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
+                                    <path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
+                                </svg>
+                                    <!-- end fasel -->
+            <div class="container df-btenn">
+                <div class="text d-flex-c">
+                    <ul class="d-flex-c">
+                        <li class="d-flex-c "><a href="./index-en.html">Home</a></li>
+                        <li class="d-flex-c acteve"><a href="./order_2-en.html">Order Washing</a></li>
+                        <li class="d-flex-c"><a href="./slider-en.html">Our Washes</a></li>
+                        <li class="d-flex-c"><a href="./contctus-en.html">Contact Us</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="socel">
+                    <!-- ... (social media icons) ... -->
+                    <a href="https://www.instagram.com/dawliya_kw/"> <i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61552925850488">   <i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/Dawliya_Kw?t=9szumlyYD6dnkQUvGeVkpQ&s=08"> <i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://tiktok.com/@al_dwalya.car.det"> <i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://pin.it/6CZBzcC">   <i class="fa-brands fa-pinterest"></i></a>
+                    <a href="https://wa.me/96594990661">   <i class="fa-brands fa-square-whatsapp"></i></a>
+                </div>
+            </div>
+            <p class="end">
+                <div class="normal h-fall w-fall d-flex-c flex-column w-fall-mob-mini tex-c">
+                    <h2 class="c-white mb-35">Contact us on WhatsApp</h2>
+                    <span class="wa-w mb-35"><a href="https://wa.me/96594990661">Order Now!</a></span>
+                </div>
+            </p>
+        </footer>
+        <!-- end footer -->
+    
+        <script>
+            function showsidebar() {
+                const text = document.querySelector('.text');
+                text.style.display = 'flex';
+            }
+    
+            function hideSidebar() {
+                const text = document.querySelector('.text');
+                text.style.display = 'none';
+            }
+        </script>
+</body>
+</html>
